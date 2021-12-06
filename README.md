@@ -6,7 +6,7 @@ This project provides PoC implementations to evaluate the performance of the fol
 
 The code implement of Public key authenticated bidirectional keyword search
 
-For bilinear-pairing schemes (ZWDT), we implement them by using PBC library with Type-A pairing (160, 512) for 80-bit security.
+For bilinear-pairing scheme (ZWDT21), we implement them by using PBC library with Type-A pairing (160, 512) for 80-bit security.
 
 For pairing-free scheme (LL21), we implement it by using Charm library with parameter spec160r1 for 80-bit security.
 
