@@ -2,21 +2,17 @@
 
 This is an official implementation of PAEBKS proposed by our paper "[Privacy-preserving bidirectional keyword search over encrypted data for cloud-assisted IIoT](https://www.sciencedirect.com/science/article/abs/pii/S1383762122001631)". 
 
-This project provides PoC implementations to evaluate the performance of the following schemes, which adopt the PBC library with Type-A pairing (160, 512) for 80-bit security.
+## Abstact
+Cloud-assisted industrial Internet of Things (IIoT) technology is increasingly used by related enterprises. To preserve the privacy of sensitive data, IIoT devices must encrypt data before sending them to a cloud server. Public-key encryption with keyword search (PEKS) provides an important search function over cloud-assisted IIoT, allowing users to search for encrypted data without decryption. To increase practical functionality, Zhang et al. recently proposed the concept of public-key encryption with bidirectional keyword search, which supports both sender and receiver searches. However, their scheme provides insufficient security because it cannot resist keyword guessing attacks (KGA). Additionally, their scheme requires time-consuming bilinear pairing operations, resulting in high computational costs. In this study, a novel concept called public-key authenticated encryption with bidirectional keyword search was devised for multi-user settings. The system definition and security requirements are formally defined to ensure that no adversary can overcome the indistinguishability against chosen-keyword attacks or KGA. Furthermore, we propose a pairing-free semi-generic construction, combining a multiparty non-interactive protocol and authenticated functionality, which has proven to be secure under the standard model. The experimental results reveal that, compared with other state-of-the-art schemes, the proposed scheme is more practical, secure, and suitable for use with cloud-assisted IIoT systems.
 
-- Our scheme: Hierarchical identity-based puncturable inner product functional encryption (HIBP-IPFE)
-- SDH+21's work: [Hierarchical identity-based inner product functional encryption](https://doi.org/10.1016/j.ins.2021.05.062)
-
+## Details of implementation
 This project provides PoC implementations to evaluate the performance of the following schemes:
 
-1. ZWDT21 - Computer Standards & Interfaces - [Public-key encryption with bidirectional keyword search and its application to encrypted emails.](https://doi.org/10.1016/j.csi.2021.103542) 
-2. LL21 - IEEE Trans. Mobile Computing - [Lightweight Public Key Authenticated Encryption with Keyword Search against Adaptively-Chosen-Targets Adversaries for Mobile Devices.](https://doi.org/10.1109/TII.2020.3006474)
+1. Our scheme - Journal of Systems Architecture - [Public-key authenticated encryption with bidirectional keyword search (PAEBKS)](https://www.sciencedirect.com/science/article/abs/pii/S1383762122001631)
+2. ZWDT21 - Computer Standards & Interfaces - [Public-key encryption with bidirectional keyword search and its application to encrypted emails.](https://doi.org/10.1016/j.csi.2021.103542) 
+3. LL21 - IEEE Trans. Mobile Computing - [Lightweight Public Key Authenticated Encryption with Keyword Search against Adaptively-Chosen-Targets Adversaries for Mobile Devices.](https://doi.org/10.1109/TII.2020.3006474)
 
-The code implementation of Public key authenticated bidirectional keyword search
-
-For the bilinear-pairing scheme (ZWDT21), we implement them by using PBC library with Type-A pairing (160, 512) for 80-bit security.
-
-For a pairing-free scheme (LL21), we implement it by using Charm library with parameter spec160r1 for 80-bit security.
+For the bilinear-pairing scheme (ZWDT21), we implement them by using PBC library with Type-A pairing (160, 512) for 80-bit security. For a pairing-free scheme (LL21), we implement it by using Charm library with parameter spec160r1 for 80-bit security.
 
 ## Required library
 
